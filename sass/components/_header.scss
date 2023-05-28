@@ -1,10 +1,9 @@
 
 .header__container-logo {
-    max-width: 1500px;
     display: flex;
+    @extend .container;
     background-color: rgb(255, 255, 255);
     width: 100%;
-    margin: auto;
 
     a {
         display: flex;

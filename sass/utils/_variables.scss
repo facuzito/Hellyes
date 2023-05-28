@@ -48,4 +48,11 @@ ul {
 $bpSmall: (255px);
 $bpMediumSmall: (375px);
 $bpMedium: (550px);
-$bpLarge: (1024px);
+$bpLarge: (1024px); 
+
+// EXTENDS
+
+.container {
+    max-width: 1500px;
+    margin: auto;
+}

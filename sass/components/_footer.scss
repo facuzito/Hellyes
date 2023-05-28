@@ -2,18 +2,16 @@
     background-color: rgb(255, 255, 255);
 
     &__container {
-        background-color: rgb(255, 255, 255);
         display: flex;
+        @extend .container;
+        background-color: rgb(255, 255, 255);
         width: 100%;
-        margin: auto;
-        max-width: 1500px;
 
         &-items {
             display: grid;
+            @extend .container;
             text-align: center;
-            max-width: 1500px;
             gap: 20px;
-            margin: auto;
 
             a {
                 font-size: 20px;
@@ -23,24 +21,18 @@
         }
         
         &-redes {
-            background-color: rgb(0, 0, 0);
-            max-width: 1500px;
             display: grid;
-            margin: auto;
+            @extend .container;
+            background-color: rgb(0, 0, 0);
             width: 100%;
-            padding: 10px 50px;
+            padding: 10px 10px;
             justify-content: center;
-            gap: 10px;
 
             &-list {
                 display: flex;
+                @extend .container;
                 justify-content: space-between;
-                gap: 20px;
-                max-width: 1500px;
-
-                li a img {
-                    width: 25px
-                }
+                gap: 50px;
             }
         }
     }

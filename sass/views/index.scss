@@ -5,21 +5,19 @@
 
 .hero {
     background-color: rgb(255, 255, 255);
-    margin: auto;
-    max-width: 1500px;
+    @extend .container;
 
     &__container {
-        max-width: 1500px;
-        margin: auto;
         display: grid;
+        @extend .container;
         grid-template-columns: 1fr;
         gap: 50px;
         padding: 10px;
 
         &-video {
-                width: 100%;
-        border-radius: 20px;
-        box-shadow: 0px 3px 10px rgba(0,0,0,0.2);
+            width: 100%;
+            border-radius: 20px;
+            box-shadow: 0px 3px 10px rgba(0,0,0,0.2);
         }
 
         &-info {
@@ -48,18 +46,17 @@
 }
 
 .card__container {
+    display: grid;
     max-width: 1500px; 
     width: 100%;
-    display: grid;
     gap: 10px;
 }
 
 .card__title {
     display: flex;
-    max-width: 1500px;
+    @extend .container;
     justify-content: space-between;
     align-items: center;
-    margin: auto;
     padding: 10px;
 
     a {
@@ -111,8 +108,6 @@
         h3 {
             color: black;
         }
-
-
     }
 }
 
