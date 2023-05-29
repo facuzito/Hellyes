@@ -1,0 +1,33 @@
+.login__container {
+    background-color: rgb(255, 255, 255);
+    @extend .container;
+
+    &-items {
+        display: grid;
+        max-width: 550px;
+        justify-content: center;
+        margin: auto;
+        gap: 30px;
+
+        a {
+            @extend .buttonOne;
+        }
+
+        h2 {
+            color: rgb(159, 159, 159);
+        }
+
+        input {
+            width: 100%;
+            height: 70px;
+            margin: auto;
+            border-radius: 15px;
+            border: grey solid 3px;
+
+            &::placeholder {
+             padding-left: 15px;
+             font-size: 25px;
+            }
+        }
+    }    
+}

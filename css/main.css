@@ -7,18 +7,9 @@
 @font-face {
   color: rgb(255, 255, 255);
   font-family: Gotham;
-  src: url(../assets/tts/Gotham\ Rounded\ Book.otf) format(OpenType);
+  src: url(../assets/tts/Gotham\ Rounded\ .otf) format(OpenType);
 }
 /* GLOBAL */
-h1 {
-  color: rgb(0, 0, 0);
-}
-
-p {
-  color: rgb(0, 0, 0);
-  line-height: 1.5;
-}
-
 a {
   text-decoration: none;
   font-size: 25px;
@@ -42,9 +33,43 @@ ul {
   list-style-type: none;
 }
 
-.container, .card__title, .hero__container, .hero, .footer__container-redes-list, .footer__container-redes, .footer__container-items, .footer__container, .header__container-logo {
+.container, .login__container, .card__title, .hero__container, .hero, .footer__container-redes-list, .footer__container-redes, .footer__container-items, .footer__container, .header__container-logo {
   max-width: 1500px;
   margin: auto;
+}
+
+.gotham {
+  font-family: Gotham;
+  font-size: 30px;
+}
+
+.a1, .card__title a, .footer__container-items a {
+  color: black;
+  font-family: Gotham;
+  font-size: 25px;
+  text-decoration: none;
+}
+.a1:hover, .card__title a:hover, .footer__container-items a:hover {
+  color: rgb(171, 30, 30);
+  transition: all 400ms ease;
+}
+
+.buttonOne, .register a, .login__container-items a, .card__info a, .hero__container-info a {
+  color: white;
+  background-color: rgb(0, 0, 0);
+  border-radius: 15px;
+  text-decoration: none;
+  margin: auto;
+  padding: 10px 40px;
+}
+.buttonOne:hover, .register a:hover, .login__container-items a:hover, .card__info a:hover, .hero__container-info a:hover {
+  transition: all 400ms ease;
+  background-color: rgb(171, 30, 30);
+  color: white;
+}
+
+.header {
+  margin-bottom: 10px;
 }
 
 .header__container-logo {
@@ -117,18 +142,14 @@ ul {
 }
 .footer__container {
   display: flex;
+  margin-top: 30px;
   background-color: rgb(255, 255, 255);
   width: 100%;
 }
 .footer__container-items {
   display: grid;
-  text-align: center;
+  grid-template-columns: repeat(1, 1fr);
   gap: 20px;
-}
-.footer__container-items a {
-  font-size: 20px;
-  text-decoration: none;
-  color: black;
 }
 .footer__container-redes {
   display: grid;
@@ -141,6 +162,36 @@ ul {
   display: flex;
   justify-content: space-between;
   gap: 50px;
+}
+.footer__container-redes-list .whatsapp {
+  color: white;
+}
+.footer__container-redes-list .whatsapp:hover {
+  color: #00cf1f;
+}
+.footer__container-redes-list .instagram {
+  color: white;
+}
+.footer__container-redes-list .instagram:hover {
+  color: #ac008f;
+}
+.footer__container-redes-list .facebook {
+  color: white;
+}
+.footer__container-redes-list .facebook:hover {
+  color: #0d57d6;
+}
+.footer__container-redes-list .linkedin {
+  color: white;
+}
+.footer__container-redes-list .linkedin:hover {
+  color: #001c71;
+}
+.footer__container-redes-list .github {
+  color: white;
+}
+.footer__container-redes-list .github:hover {
+  color: #920000;
 }
 
 @media (min-width: 375px) {
@@ -190,19 +241,9 @@ ul {
 }
 .hero__container-info {
   display: grid;
+  grid-template-columns: repeat(1, 1fr);
   gap: 20px;
   text-align: center;
-}
-.hero__container-info a {
-  color: white;
-  background-color: rgb(0, 0, 0);
-  border-radius: 20px;
-  text-decoration: none;
-}
-.hero__container-info a:hover {
-  transition: all 400ms ease;
-  background-color: rgb(171, 30, 30);
-  color: white;
 }
 .hero__container-info h2 {
   font-size: 20px;
@@ -212,7 +253,7 @@ ul {
   display: grid;
   max-width: 1500px;
   width: 100%;
-  gap: 10px;
+  gap: 20px;
 }
 
 .card__title {
@@ -221,24 +262,14 @@ ul {
   align-items: center;
   padding: 10px;
 }
-.card__title a {
-  text-decoration: none;
-  color: black;
-}
-.card__title a:hover {
-  transition: all 400ms ease;
-  color: rgb(171, 30, 30);
-}
-
 .card {
-  width: 100%;
   display: grid;
   margin: auto;
   padding: 10px;
   background-color: rgb(255, 255, 255);
   box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 30px;
   text-align: center;
-  cursor: default;
   transition: all 400ms ease;
 }
 .card:hover {
@@ -246,21 +277,13 @@ ul {
   transform: translateY(-3%);
 }
 .card img {
-  border-radius: 25px;
-  height: auto;
+  border-radius: 15px;
   width: 100%;
 }
 .card__info {
   display: grid;
-  gap: 20px;
+  gap: 10px;
   padding-top: 20px;
-}
-.card__info a {
-  color: white;
-  background-color: black;
-  padding: 20px;
-  border-radius: 20px;
-  text-decoration: none;
 }
 .card__info h3 {
   color: black;
@@ -306,4 +329,86 @@ ul {
     grid-template-columns: repeat(4, 1fr);
     margin: auto;
   }
+}
+.login__container {
+  background-color: rgb(255, 255, 255);
+}
+.login__container-items {
+  display: grid;
+  max-width: 550px;
+  justify-content: center;
+  margin: auto;
+  gap: 30px;
+}
+.login__container-items h2 {
+  color: rgb(159, 159, 159);
+}
+.login__container-items input {
+  width: 100%;
+  height: 70px;
+  margin: auto;
+  border-radius: 15px;
+  border: grey solid 3px;
+}
+.login__container-items input::placeholder {
+  padding-left: 15px;
+  font-size: 25px;
+}
+
+.register {
+  display: grid;
+  margin: auto;
+  max-width: 1500px;
+  justify-content: center;
+  text-align: center;
+}
+.register__container {
+  display: grid;
+  max-width: 550px;
+  text-align: center;
+  margin: auto;
+  gap: 20px;
+}
+.register__container h1 {
+  margin: 0;
+}
+.register__container-names {
+  display: flex;
+  max-width: 550px;
+}
+.register__container-names input {
+  height: 50px;
+  margin: auto;
+  border-radius: 15px;
+  border: grey solid 3px;
+}
+.register__container-names input::placeholder {
+  padding-left: 15px;
+  font-size: 20px;
+}
+.register__container-email {
+  display: grid;
+  justify-content: space-between;
+  margin: auto;
+  max-width: 550px;
+  gap: 20px;
+}
+.register__container-email p {
+  margin: 0;
+}
+.register__container-email input {
+  width: 100%;
+  height: 50px;
+  margin: auto;
+  border-radius: 15px;
+  border: grey solid 3px;
+}
+.register__container-email input::placeholder {
+  padding-left: 15px;
+  font-size: 20px;
+}
+.register__container-requests {
+  display: grid;
+  gap: 20px;
+  padding-bottom: 20px;
 }

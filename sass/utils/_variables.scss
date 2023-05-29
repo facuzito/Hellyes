@@ -7,19 +7,9 @@
 @font-face {
     color: rgb(255, 255, 255);
     font-family: Gotham;
-    src: url(../assets/tts/Gotham\ Rounded\ Book.otf) format(OpenType);
+    src: url(../assets/tts/Gotham\ Rounded\ .otf) format(OpenType);
 }
 /* GLOBAL */
-
-h1 {
-    color: rgb(0, 0, 0);
-}
-
-p {
-    color: rgb(0, 0, 0);
-    line-height: 1.5;
-}
-
 a {
     text-decoration: none;
     font-size: 25px;
@@ -50,9 +40,58 @@ $bpMediumSmall: (375px);
 $bpMedium: (550px);
 $bpLarge: (1024px); 
 
+
+
 // EXTENDS
 
+
+// CONTENEDORES
 .container {
     max-width: 1500px;
     margin: auto;
 }
+
+// FUENTES
+.gotham {
+    font-family: Gotham;
+    font-size: 30px;
+}
+
+
+// A´s
+
+.a1 {
+    color: black;
+    font-family: Gotham;
+    font-size: 25px;
+    text-decoration: none;
+
+    &:hover {
+        color: rgb(171, 30, 30);
+        transition: all 400ms ease;
+    }
+}
+// BOTONES
+.buttonOne {
+    color: white;
+    background-color: rgb(0, 0, 0);
+    border-radius: 15px;
+    text-decoration: none;
+    margin: auto;
+    padding: 10px 40px;
+
+    &:hover {
+        transition: all 400ms ease;
+        background-color: rgb(171, 30, 30);
+        color: white;
+    }
+}
+
+// MIXINS
+
+@mixin templateGrid($column) {
+    display: grid;
+    grid-template-columns: repeat($column, 1fr);
+    gap: 20px;
+}
+

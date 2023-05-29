@@ -1,0 +1,74 @@
+.register {
+    display: grid;
+    margin: auto;
+    max-width: 1500px;
+    justify-content: center;
+    text-align: center;
+
+    a {
+        @extend .buttonOne;
+    }
+
+    &__container {
+        display: grid;
+        max-width: 550px;
+        text-align: center;
+        margin: auto;
+        gap: 20px;
+
+        h1 {
+            margin: 0;
+        }
+
+        &-names {
+            display: flex;
+            max-width: 550px;
+
+
+            input {
+                height: 50px;
+                margin: auto;
+                border-radius: 15px;
+                border: grey solid 3px;
+    
+                &::placeholder {
+                 padding-left: 15px;
+                 font-size: 20px;
+                }
+            }
+        }
+
+        &-email {
+            display: grid;
+            justify-content: space-between;
+            margin: auto;
+            max-width: 550px;
+            gap: 20px;
+
+            p {
+                margin: 0;
+            }
+
+            input {
+                width: 100%;
+                height: 50px;
+                margin: auto;
+                border-radius: 15px;
+                border: grey solid 3px;
+    
+                &::placeholder {
+                 padding-left: 15px;
+                 font-size: 20px;
+                }
+            }
+        }
+
+        &-requests {
+            display: grid;
+            gap: 20px;
+            padding-bottom: 20px;
+        }
+
+
+    }
+}

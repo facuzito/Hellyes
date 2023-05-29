@@ -4,19 +4,19 @@
     &__container {
         display: flex;
         @extend .container;
+        margin-top: 30px;
         background-color: rgb(255, 255, 255);
         width: 100%;
 
         &-items {
-            display: grid;
             @extend .container;
-            text-align: center;
-            gap: 20px;
+            @include templateGrid(1);
+            // display: grid;
+            // text-align: center;
+            // gap: 20px;
 
             a {
-                font-size: 20px;
-                text-decoration: none;
-                color: black;
+                @extend .a1;
             }
         }
         
@@ -33,10 +33,33 @@
                 @extend .container;
                 justify-content: space-between;
                 gap: 50px;
+
+                $socialIcons: (
+                    whatsapp: #00cf1f,
+                    instagram: #ac008f,
+                    facebook: #0d57d6,
+                    linkedin: #001c71,
+                    github: #920000
+                );
+
+                
+                @each $socialName, $socialColors in $socialIcons {
+                    .#{$socialName} {
+                        color: white;
+
+                        &:hover {
+                            color: $socialColors;
+                        }
+    
+                    }
+
+
+                }
             }
         }
     }
 }
+
 
 
 @media (min-width: $bpMediumSmall) { 
