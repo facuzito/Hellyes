@@ -359,15 +359,13 @@ ul {
   display: grid;
   margin: auto;
   max-width: 1500px;
-  justify-content: center;
-  text-align: center;
 }
 .register__container {
   display: grid;
+  margin: auto;
   max-width: 550px;
   text-align: center;
-  margin: auto;
-  gap: 20px;
+  gap: 10px;
 }
 .register__container h1 {
   margin: 0;
@@ -375,10 +373,11 @@ ul {
 .register__container-names {
   display: flex;
   max-width: 550px;
+  justify-content: space-between;
 }
 .register__container-names input {
+  width: 49%;
   height: 50px;
-  margin: auto;
   border-radius: 15px;
   border: grey solid 3px;
 }
@@ -388,10 +387,8 @@ ul {
 }
 .register__container-email {
   display: grid;
-  justify-content: space-between;
-  margin: auto;
   max-width: 550px;
-  gap: 20px;
+  gap: 10px;
 }
 .register__container-email p {
   margin: 0;
@@ -409,6 +406,6 @@ ul {
 }
 .register__container-requests {
   display: grid;
-  gap: 20px;
+  gap: 10px;
   padding-bottom: 20px;
 }
