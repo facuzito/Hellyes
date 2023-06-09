@@ -1,19 +1,16 @@
 .footer {
     background-color: rgb(255, 255, 255);
+    margin-bottom: auto;
 
     &__container {
         display: flex;
         @extend .container;
-        margin-top: 30px;
         background-color: rgb(255, 255, 255);
         width: 100%;
 
         &-items {
             @extend .container;
             @include templateGrid(1);
-            // display: grid;
-            // text-align: center;
-            // gap: 20px;
 
             a {
                 @extend .a1;
@@ -27,6 +24,7 @@
             width: 100%;
             padding: 10px 10px;
             justify-content: center;
+            margin-bottom: 0;
 
             &-list {
                 display: flex;

@@ -51,6 +51,7 @@
 }
 
 @media (min-width: $bpLarge) {
+    
     .navbar.navbar-expand-lg.navbar-dark.bg-black {
         max-width: 1500px;
         margin: auto;
@@ -59,7 +60,7 @@
             font-size: 20px;
         }
     }
-    
+
     .d-flex {
         button {
             border-radius: 20px;
